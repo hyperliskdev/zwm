@@ -23,17 +23,16 @@ Basically, how x-server mainly functions is an application will send a request t
 #### Reparenting
 When you seen all the minimize buttons, maximize buttons and frames around a window, this is created by the Window Manager. Reparenting is probably the most obvious functionalliy and visual way to be distinct. Sadly, the one impossible thing is the decorations can not be matched to imformation/colours inside the application window. That data cannot be queried... 
 
-<pre>
+<i>
+[ Xlib Programming Manual (16.3) ]
 
-    [ Xlib Programming Manual (16.3) ]
+A window manager can decorate windows on the screen with titlebars and place little boxes on the titlebar with which thewindow can be moved or resized.  This is only one possibility, modeled on the user interface on the Macintosh.
 
-    A window manager can decorate windows on the screen with titlebars and place little boxes on the titlebar with which thewindow can be moved or resized.  This is only one possibility, modeled on the user interface on the Macintosh.
-    
-    To do this, the window manager creates a child of the root somewhat larger than the top−level window of the application.Then it calls XReparentWindow(), specifying the top−level window of the  application as win and the new parent asparent. win and all its descendants will then be descendants of parent.
-    
-    In the area where the new parent is visible around the top−level window of the application, the window manager can putanything it wants.  This could include text, graphics, and small windows which perform certain functions when a button is clicked in them.
+To do this, the window manager creates a child of the root somewhat larger than the top−level window of the application.Then it calls XReparentWindow(), specifying the top−level window of the  application as win and the new parent asparent. win and all its descendants will then be descendants of parent.
 
-</pre>
+In the area where the new parent is visible around the top−level window of the application, the window manager can putanything it wants.  This could include text, graphics, and small windows which perform certain functions when a button is clicked in them.
+</i>
+
 
     
 #### Compositing
